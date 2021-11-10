@@ -1,5 +1,5 @@
 
-//const bigBox = prompt('Привет друзья');
+{//const bigBox = prompt('Привет друзья');
 
 const presentOrderBtn = document.querySelector('.present__order-btn');
 const pageOverlayModal = document.querySelector('.page__overlay_modal');
@@ -54,5 +54,23 @@ const handlerModel = (openBtn, modal, openSelector, closeTrigger, sk) => {
 };
 handlerModel(presentOrderBtn, pageOverlayModal, 'page__overlay_modal_open', modalClose, 'slow');
 //Открыте и закрытие модального окна (все что выше!!!)
+}
+{
+  const headerContactsBurger = document.querySelector('.header__contacts-burger');
+  const headerContacts = document.querySelector('.header__contacts');
 
+  const handlerBurger = (openBtn, menu, openSelector) => {
+    openBtn.addEventListener('click', () => {
+      if (menu.classList.contains(openSelector)) {
+        menu.style.height = '';
+        menu.classList.remove(openSelector)
+      } else {
+        
+        menu.style.height = menu.scrollHeight + 'px';
+        menu.classList.add(openSelector)
+      }
+    })
+  };
+  handlerBurger(headerContactsBurger, headerContacts, 'header__contacts_open');
+}
 
