@@ -309,6 +309,9 @@ legend {
 		padding-top: 13px;
 		padding-bottom: 13px
 }
+.close__header {
+	display: none;
+}
 
 .header__container {
 		display: -webkit-box;
@@ -330,8 +333,8 @@ legend {
 
 .header__logo {
 		display: block;
-		width: 124px;
-		height: 34px
+		width: 300px;
+		height: 70px;
 }
 
 .header__contacts {
@@ -955,7 +958,7 @@ legend {
 		}
 
 		.header__logo {
-				width: 170px
+				width: 200px
 		}
 
 		.header__contacts {
@@ -1103,7 +1106,8 @@ legend {
 		.header__logo {
 				-webkit-align-self: center;
 				-ms-flex-item-align: center;
-				align-self: center
+				align-self: center;
+				max-width: 300px;
 		}
 
 		.header__container {
@@ -1125,16 +1129,16 @@ legend {
 				-moz-box-align: end;
 				-ms-flex-align: end;
 				align-items: flex-end;
-				padding: 0 20px
+				padding: 0 20px;
 		}
 
 		.header__contacts {
 				height: auto;
-				position: static
+				position: static;
 		}
 
 		.contacts {
-				padding: 0
+				padding: 0;
 		}
 
 		.contacts__list {
@@ -1144,7 +1148,7 @@ legend {
 				-moz-box-orient: vertical;
 				-moz-box-direction: normal;
 				-ms-flex-direction: column;
-				flex-direction: column
+				flex-direction: column;
 		}
 
 		.contacts__item:not(:last-child) {
