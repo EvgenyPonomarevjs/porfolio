@@ -12,7 +12,6 @@ const disabledScroll = () => {
   document.body.scrollPosition = window.scrollY;
   document.body.style.cssText = `
   overflow: hidden;
-  
   top: -${document.body.scrollPosition}px;
   left: 0;
   height: 100vh;
@@ -112,3 +111,42 @@ handlerModel(presentOrderBtn, pageOverlayModal, 'page__overlay_modal_open', moda
   handlerBurger(headerContactsBurger, headerContacts, 'header__contacts_open');
 }
 
+{//Галерея
+  const portfolioList = document.querySelector('.portfolio__list');
+  const pageOverlay = document.createElement('div');
+  pageOverlay.classList.add('page__overlay');
+
+
+  portfolioList.addEventListener('click', (event) => {
+
+    const card = event.target.closest('.card');
+
+    if (card) {
+      document.body.append(pageOverlay);
+      const title = card.querySelector('.card__client');
+
+      const picture = document.createElement('picture');
+      picture.style.cssText = `
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1440px;
+      `;
+
+      picture.innerHTML = `
+      <source srcset="${card.dataset.fullImage}.avif" type="image/avif">
+      <source srcset="${card.dataset.fullImage}.webp" type="image/webp">
+      <img src="${card.dataset.fullImage}.jpg" alt="${title.textContent}">
+      `;
+      pageOverlay.append(picture);
+      disabledScroll();
+    }
+  })
+  pageOverlay.addEventListener('click', () => {
+    pageOverlay.remove();
+    pageOverlay.textContent = '';
+    enabledScroll();
+  })
+}
