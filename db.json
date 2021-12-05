@@ -1,15 +1,15 @@
 [{
     "preview": "img/db/indotravel-min",
-    "image": "img/db/indotravel",
-    "client": "Nabali",
-    "year": 2021,
-    "type": "Landing page"
+    "image": "img/db/work2",
+    "client": "PRO Тендер",
+    "year": 2020,
+    "type": "Многостраничный сайт"
   },
 
   {
     "preview": "img/db/friendly_house-min",
-    "image": "img/db/friendly_house",
-    "client": "Friendly",
+    "image": "img/db/work1",
+    "client": "PRO Тендер",
     "year": 2020,
     "type": "Многостраничный сайт"
   },
@@ -25,7 +25,7 @@
   {
     "preview": "img/db/iphone-min",
     "image": "img/db/iphone",
-    "client": "Full Apple",
+    "client": "Тренировочная работа",
     "year": 2021,
     "type": "Landing-page"
   },
